@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block title %} approve-centers {% endblock title %}
+
+
+{% block content  %}
+<!-- Include the side header  -->
+{% include "include/header.html" %}
+
+
+<table class="table jumbotron">
+    <h3>Approve Centers  <span><a href="{% url 'state-create' %}" class="btn btn-primary">Register new Center</a></span></h3>
+    <thead>
+      <tr>
+        <th scope="col">S/N</th>
+        <th scope="col">State</th>
+        <th scope="col">Location</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for state in states %}
+        <tr>
+          <th>{{ state.id }}</th>
+          <td>{{ state.state }}</td>
+          <td>{{ state.location }}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  {% include "include/pagination.html" %}
+
+{% endblock content  %}

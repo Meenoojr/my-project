@@ -1,0 +1,94 @@
+{% extends "base.html" %}
+{% block title %}Search Results — {{ query }}{% endblock %}
+
+{% block content %}
+{% include "include/header.html" %}
+
+<div class="d-flex align-items-center justify-content-between mb-3 mt-2 flex-wrap" style="gap:12px;">
+  <div>
+    <div class="breadcrumb-trail"><a href="{% url 'dashboard' %}">Dashboard</a> <span>›</span> Search</div>
+    <h2 style="font-size:1.3rem;font-weight:800;margin:0;">
+      Plate Search
+      {% if query %}<span style="color:var(--alpr-text-muted);font-weight:500;"> — "{{ query }}"</span>{% endif %}
+    </h2>
+  </div>
+  <!-- New search -->
+  <form action="{% url 'search' %}" method="get">
+    <div class="search-bar" style="width:280px;">
+      <input type="text" name="q" placeholder="Search plate number…" value="{{ query }}" autocomplete="off">
+      <button type="submit"><i class="fas fa-search"></i></button>
+    </div>
+  </form>
+</div>
+
+{% if query %}
+<div class="mb-3">
+  {% if data.count == 0 %}
+    <div class="alert alert-warning d-flex align-items-center gap-2" style="gap:10px;">
+      <i class="fas fa-exclamation-circle"></i>
+      No vehicle found matching plate number <strong>"{{ query }}"</strong>.
+    </div>
+  {% else %}
+    <div class="alert alert-success d-flex align-items-center" style="gap:10px;">
+      <i class="fas fa-check-circle"></i>
+      <strong>{{ data.count }}</strong> vehicle{{ data.count|pluralize }} found for "{{ query }}"
+    </div>
+  {% endif %}
+{% endif %}
+
+<div class="ui-table-wrap">
+  <div class="ui-table-toolbar">
+    <span class="ui-table-toolbar-title"><i class="fas fa-search" style="color:var(--alpr-blue);"></i> Results</span>
+    <a href="{% url 'car-list' %}" class="btn-secondary-ui" style="font-size:.82rem;padding:.38rem .9rem;">
+      <i class="fas fa-list mr-1"></i> Browse All
+    </a>
+  </div>
+  <div class="table-responsive">
+    <table class="ui-table">
+      <thead>
+        <tr>
+          <th>Plate Number</th>
+          <th>Owner</th>
+          <th>Category</th>
+          <th>Model</th>
+          <th>Color</th>
+          <th>Engine No.</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for car in cars %}
+        <tr>
+          <td><span class="plate-badge">{{ car.plate_number }}</span></td>
+          <td><strong>{{ car.owner.full_name }}</strong></td>
+          <td>
+            {% if car.vehicle_category == "Government" %}
+              <span class="badge-pill-blue">{{ car.vehicle_category }}</span>
+            {% elif car.vehicle_category == "Commercial" %}
+              <span class="badge-pill-amber">{{ car.vehicle_category }}</span>
+            {% else %}
+              <span class="badge-pill-gray">{{ car.vehicle_category }}</span>
+            {% endif %}
+          </td>
+          <td>{{ car.model }}</td>
+          <td>{{ car.color }}</td>
+          <td style="font-family:monospace;font-size:.85rem;">{{ car.engine_number }}</td>
+          <td>
+            <a href="{% url 'car-detail' car.id %}" class="btn-icon btn-icon--blue" title="View"><i class="fas fa-eye"></i></a>
+            <a href="{% url 'car-update' car.id %}" class="btn-icon ml-1" title="Edit"><i class="fas fa-pencil-alt"></i></a>
+          </td>
+        </tr>
+        {% empty %}
+        <tr>
+          <td colspan="7" class="ui-table-empty">
+            <i class="fas fa-search"></i>
+            {% if query %}No results for "{{ query }}".{% else %}Enter a plate number above to search.{% endif %}
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+{% if query %}</div>{% endif %}
+{% endblock %}

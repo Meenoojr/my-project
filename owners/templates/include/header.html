@@ -1,0 +1,22 @@
+<div class="feature-cards mb-0">
+  <a href="{% url 'car-create' %}" class="feature-card {% if request.resolver_match.view_name == 'car-create' %}active{% endif %}">
+    <div class="feature-card-icon"><i class="fas fa-plus-circle"></i></div>
+    <div class="feature-card-title">New Vehicle</div>
+    <div class="feature-card-text">Register a fresh vehicle record.</div>
+  </a>
+  <a href="{% url 'car-list' %}" class="feature-card {% if request.resolver_match.view_name == 'car-list' %}active{% endif %}">
+    <div class="feature-card-icon"><i class="fas fa-car"></i></div>
+    <div class="feature-card-title">Vehicle Registry</div>
+    <div class="feature-card-text">Browse all registered vehicles.</div>
+  </a>
+  <a href="{% url 'owner-create' %}" class="feature-card {% if request.resolver_match.view_name == 'owner-create' or request.resolver_match.view_name == 'owner-update' %}active{% endif %}">
+    <div class="feature-card-icon"><i class="fas fa-user-plus"></i></div>
+    <div class="feature-card-title">New Owner</div>
+    <div class="feature-card-text">Add a new owner profile.</div>
+  </a>
+  <a href="{% url 'owner-list' %}" class="feature-card {% if request.resolver_match.view_name == 'owner-list' or request.resolver_match.view_name == 'owner-detail' %}active{% endif %}">
+    <div class="feature-card-icon"><i class="fas fa-users"></i></div>
+    <div class="feature-card-title">Owner Directory</div>
+    <div class="feature-card-text">View all registered owners.</div>
+  </a>
+</div>
