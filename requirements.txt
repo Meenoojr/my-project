@@ -12,6 +12,7 @@ typing_extensions==4.1.1
 urllib3==1.26.18
 # numpy==2.2.0
 pytesseract==0.3.13
+gunicorn
 
 
 # easyocr and ultralytics are optional — install separately for better ALPR accuracy:
