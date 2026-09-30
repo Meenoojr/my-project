@@ -13,7 +13,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 import os
 from pathlib import Path
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'my-project-nnca.onrender.com']  # Add your Render app's domain here
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'my-project-grkd.onrender.com']  # Add your Render app's domain here
 RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
 if RENDER_EXTERNAL_HOSTNAME:
     ALLOWED_HOSTS.append(RENDER_EXTERNAL_HOSTNAME)
