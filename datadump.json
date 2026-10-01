@@ -1,0 +1,315 @@
+[
+{
+    "model": "auth.user",
+    "fields": {
+        "password": "pbkdf2_sha256$1000000$AvsBR38fq2kZB2TLWC9mRV$B8ptodrpvHPZpQKp65IyGYxC/w6QMS6XdA6kJKJ6KTg=",
+        "last_login": "2026-10-01T22:07:00.951Z",
+        "is_superuser": true,
+        "username": "hamim",
+        "first_name": "",
+        "last_name": "",
+        "email": "hamim@gmail.com",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-09-27T17:27:06.957Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "fields": {
+        "password": "pbkdf2_sha256$1000000$AC7ynqfAzN5VgP0fuZO5Oj$WH6gD2Jiq2wfRUjFTqeBnA6XM3WT2EiMRSsW2N8rj7E=",
+        "last_login": "2026-10-01T21:42:14.964Z",
+        "is_superuser": true,
+        "username": "hamim2",
+        "first_name": "Hamim",
+        "last_name": "Admin",
+        "email": "hamimsecond@gmail.com",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-10-01T21:21:24Z",
+        "groups": [],
+        "user_permissions": [
+            [
+                "add_logentry",
+                "admin",
+                "logentry"
+            ],
+            [
+                "change_logentry",
+                "admin",
+                "logentry"
+            ],
+            [
+                "delete_logentry",
+                "admin",
+                "logentry"
+            ],
+            [
+                "view_logentry",
+                "admin",
+                "logentry"
+            ],
+            [
+                "add_group",
+                "auth",
+                "group"
+            ],
+            [
+                "change_group",
+                "auth",
+                "group"
+            ],
+            [
+                "delete_group",
+                "auth",
+                "group"
+            ],
+            [
+                "view_group",
+                "auth",
+                "group"
+            ],
+            [
+                "add_permission",
+                "auth",
+                "permission"
+            ],
+            [
+                "change_permission",
+                "auth",
+                "permission"
+            ],
+            [
+                "delete_permission",
+                "auth",
+                "permission"
+            ],
+            [
+                "view_permission",
+                "auth",
+                "permission"
+            ],
+            [
+                "add_user",
+                "auth",
+                "user"
+            ],
+            [
+                "change_user",
+                "auth",
+                "user"
+            ],
+            [
+                "delete_user",
+                "auth",
+                "user"
+            ],
+            [
+                "view_user",
+                "auth",
+                "user"
+            ],
+            [
+                "add_contenttype",
+                "contenttypes",
+                "contenttype"
+            ],
+            [
+                "change_contenttype",
+                "contenttypes",
+                "contenttype"
+            ],
+            [
+                "delete_contenttype",
+                "contenttypes",
+                "contenttype"
+            ],
+            [
+                "view_contenttype",
+                "contenttypes",
+                "contenttype"
+            ],
+            [
+                "add_approved_centres",
+                "owners",
+                "approved_centres"
+            ],
+            [
+                "change_approved_centres",
+                "owners",
+                "approved_centres"
+            ],
+            [
+                "delete_approved_centres",
+                "owners",
+                "approved_centres"
+            ],
+            [
+                "view_approved_centres",
+                "owners",
+                "approved_centres"
+            ],
+            [
+                "add_carregisteration",
+                "owners",
+                "carregisteration"
+            ],
+            [
+                "change_carregisteration",
+                "owners",
+                "carregisteration"
+            ],
+            [
+                "delete_carregisteration",
+                "owners",
+                "carregisteration"
+            ],
+            [
+                "view_carregisteration",
+                "owners",
+                "carregisteration"
+            ],
+            [
+                "add_owner",
+                "owners",
+                "owner"
+            ],
+            [
+                "change_owner",
+                "owners",
+                "owner"
+            ],
+            [
+                "delete_owner",
+                "owners",
+                "owner"
+            ],
+            [
+                "view_owner",
+                "owners",
+                "owner"
+            ],
+            [
+                "add_session",
+                "sessions",
+                "session"
+            ],
+            [
+                "change_session",
+                "sessions",
+                "session"
+            ],
+            [
+                "delete_session",
+                "sessions",
+                "session"
+            ],
+            [
+                "view_session",
+                "sessions",
+                "session"
+            ]
+        ]
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "83ahf1fsedbwt59j20cws89systwh9zo",
+    "fields": {
+        "session_data": ".eJxVjDsOwjAQBe_iGln-rmVKes5g7XptHECOFCcV4u4QKQW0b2beSyTc1pa2UZY0sTgLLU6_G2F-lL4DvmO_zTLPfV0mkrsiDzrkdebyvBzu30HD0b51DcYopyJGrhpCdpxtMY6rxagd-QDeEDhSARmVhQhsAwQqhhyz9eL9AdYvN50:1xC3Ej:cahJhXOv3M8k3wY64TxybnLlZO8TDhMYcBAtdwLwFJI",
+        "expire_date": "2026-10-14T22:57:17.201Z"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 1,
+    "fields": {
+        "action_time": "2026-09-27T17:28:39.487Z",
+        "user": [
+            "hamim"
+        ],
+        "content_type": [
+            "owners",
+            "owner"
+        ],
+        "object_id": "1",
+        "object_repr": "Kermit Wagner",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 2,
+    "fields": {
+        "action_time": "2026-10-01T21:21:25.516Z",
+        "user": [
+            "hamim"
+        ],
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "object_id": "2",
+        "object_repr": "hamim2",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 3,
+    "fields": {
+        "action_time": "2026-10-01T21:27:28.707Z",
+        "user": [
+            "hamim"
+        ],
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "object_id": "1",
+        "object_repr": "hamim",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"password\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 4,
+    "fields": {
+        "action_time": "2026-10-01T21:40:35.171Z",
+        "user": [
+            "hamim"
+        ],
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "object_id": "2",
+        "object_repr": "hamim2",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 5,
+    "fields": {
+        "action_time": "2026-10-01T21:41:52.466Z",
+        "user": [
+            "hamim"
+        ],
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "object_id": "2",
+        "object_repr": "hamim2",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"First name\", \"Last name\", \"Email address\", \"Staff status\", \"Superuser status\"]}}]"
+    }
+}
+]
